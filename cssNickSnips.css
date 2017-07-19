@@ -1,0 +1,379 @@
+/*Bootstrap*/
+
+/*navbar background and border bottom color*/
+.navbar{
+	background-color: #fff;
+	border-bottom: 1px solid #eee !important;
+}
+
+
+/*center mobile menu*/
+.navbar-collapse {
+  text-align: center;
+}
+
+
+
+/*megamenu navigation*/
+.grid {
+	padding: 10px 30px;
+}
+
+.grid [class*="col-"] {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 1em;
+	text-align: center;
+	line-height: 2;
+}
+
+
+
+
+/*Animate.css Animation Trigger*/
+.hideAnimation{
+	-moz-opacity: 0;
+	-webkit-opacity: 0;
+	-o-opacity: 0;
+	opacity: 0;
+	filter: Alpha(opacity=0);/*ie8 and earlier*/
+}
+.viewAnimation{
+	-moz-opacity: 1;
+	-webkit-opacity: 1;
+	-o-opacity: 1;
+	opacity: 0;	
+	filter:Alpha(opacity=100);/*ie8 and earlier*/
+}
+.post{
+    -moz-animation-delay: .2s;
+    -webkit-animation-delay: .2s;
+    -o-animation-delay: .2s;
+    animation-delay: .2s;
+}
+
+
+
+/*banner with linear-gradient*/
+.banner{
+	height: 700px;
+	background: -moz-linear-gradient(to bottom, rgba(255,255,255,0)50%, rgba(255,255,255,1)100%), url("img/banner.jpg") center center;
+	background: -webkit-linear-gradient(to bottom, rgba(255,255,255,0)50%, rgba(255,255,255,1)100%), url("img/banner.jpg") center center;
+	background: -ms-linear-gradient(to bottom, rgba(255,255,255,0)50%, rgba(255,255,255,1)100%), url("img/banner.jpg") center center;
+	background: -o-linear-gradient(to bottom, rgba(255,255,255,0)50%, rgba(255,255,255,1)100%), url("img/banner.jpg") center center;
+	background: linear-gradient(to bottom, rgba(255,255,255,0)50%, rgba(255,255,255,1)100%), url("img/banner.jpg") center center;	
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+
+
+/*vetical align*/
+.verticalAlign{
+	position: relative;
+	height: 200px;
+}
+.verticalAlignElement{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+
+/*vertical align with hight being % specified. May have problems with ie7*/
+.verticalAlign {
+    display: table; /*no work around with ie7*/
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.verticalAlignElement{
+    display: table-cell; /*no work around with ie7*/
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+
+/*banner with fixed linear gradient and vertical align text inside*/
+.banner{
+	height: 700px;
+	position: relative;
+	background: -moz-linear-gradient(to bottom, rgba(255,255,255,0.2)0%, rgba(255,255,255,0.2)100%), url("img/banner.jpg") center center;
+	background: -webkit-linear-gradient(to bottom, rgba(255,255,255,0.2)0%, rgba(255,255,255,0.2)100%), url("img/banner.jpg") center center;
+	background: -ms-linear-gradient(to bottom, rgba(255,255,255,0.2)0%, rgba(255,255,255,0.2)100%), url("img/banner.jpg") center center;
+	background: -o-linear-gradient(to bottom, rgba(255,255,255,0.2)0%, rgba(255,255,255,0.2)100%), url("img/banner.jpg") center center;
+	background: linear-gradient(to bottom, rgba(255,255,255,0.2)0%, rgba(255,255,255,0.2)100%), url("img/banner.jpg") center center;	
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.bannerText{
+	position: absolute;
+	width: 80%;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+
+/* Create the parallax scrolling effect to banners and subbanners*/
+.banner{
+	height: 700px;
+	background: -moz-linear-gradient(to bottom, rgba(255,255,255,0)50%, rgba(255,255,255,1)100%), url("img/banner.jpg") center center;
+	background: -webkit-linear-gradient(to bottom, rgba(255,255,255,0)50%, rgba(255,255,255,1)100%), url("img/banner.jpg") center center;
+	background: -ms-linear-gradient(to bottom, rgba(255,255,255,0)50%, rgba(255,255,255,1)100%), url("img/banner.jpg") center center;
+	background: -o-linear-gradient(to bottom, rgba(255,255,255,0)50%, rgba(255,255,255,1)100%), url("img/banner.jpg") center center;
+	background: linear-gradient(to bottom, rgba(255,255,255,0)50%, rgba(255,255,255,1)100%), url("img/banner.jpg") center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+/*fix for padding left and right, for fluid container not being 100%*/
+.container-fluid{
+	padding: 0 !important;
+}
+
+
+/*fix for navbar-fixed-top*/
+body{
+	padding-top: 50px;
+}
+
+
+
+/*font*/
+p{
+	font-family: 'Roboto', sans-serif; /*google font*/
+	font-size: 21px;
+	color: #2e2e2e;
+}
+
+
+
+/*headings*/
+h1{
+	font-family: 'Roboto Condensed', sans-serif; /*google font*/
+	font-size: 64px;
+	color: #2e2e2e;
+}
+h2{
+	font-family: 'Roboto Condensed', sans-serif; /*google font*/
+	font-size: 32px;
+	color: #2e2e2e;
+}
+h3{
+	font-family: 'Roboto', sans-serif; /*google font*/
+	font-size: 30px;
+	color: #2e2e2e;
+}
+h1,h2,h3{
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+
+
+/*links*/
+a{
+	font-family: 'Roboto', sans-serif; /*google font*/
+	font-size: 21px;
+	color: #0EB9D7 !important;
+	text-decoration: none;
+}
+a:hover{
+	color: #0D266A !important;
+	cursor: pointer;
+	-moz-transition: .3s ease;
+	-webkit-transition: .3s ease;
+	-o-transition: .3s ease;
+	transition: .3s ease;
+}
+
+
+.shadow{
+	-moz-box-shadow: 1px 1px 5px #444;	
+	-webkit-box-shadow: 1px 1px 5px #444;
+	box-shadow: 1px 1px 5px #444;
+}
+
+.shadow{/*shadow inside*/
+	-moz-box-shadow: inset 1px 1px 5px #444;	
+	-webkit-box-shadow: inset 1px 1px 5px #444;
+	box-shadow: inset 1px 1px 5px #444;
+}
+
+/*button*/
+.btn {
+	background-color: #000000 !important;
+	-moz-border-radius
+	-webkit-border-radius
+	border-radius: 3px !important;
+	border: none !important;
+	color: #FFF!important;
+	font-family: ;
+	font-size: 00px !important;
+	max-width: 100% !important;
+	padding: 10px 15px !important;
+	transition: .4s ease;
+	width: 100% !important;
+}
+.btn:hover {
+	background-color: #000000 !important;
+	transition: .4s ease;
+}
+
+
+
+/*footer links*/
+.sidebar ul{
+	list-style: none;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.footer a{
+	color: #0EB9D7 !important;
+	text-decoration: none;
+}
+.footer a:hover{
+	color: #0D266A !important;
+	cursor: pointer;
+	transition: .3s ease;
+}
+
+
+/*change horizontal line color*/
+hr {
+  border-top: 1px solid #ddd !important;
+}
+
+
+
+/*MEDIA QUERIES*/
+
+/*extra small*/
+@media(max-width:767px){
+}
+
+/*small*/
+@media(min-width:768px){
+}
+
+/*medium*/
+@media(min-width:992px){
+}
+
+/*large*/
+@media(min-width:1200px){
+}
+
+
+
+
+
+
+
+
+
+
+/*HTML*/
+
+
+.container{
+	height: auto;
+	margin: 0 auto;
+}
+
+
+/*fix overflowing elements*/
+.row{
+	overflow: auto;
+}
+
+
+/*3col*/
+.aElement3, .bElement3{
+	float: left;
+	margin-right: 2%;
+	height: 300px;
+	background-color: #eee;
+}
+.cElement3{
+	float: left;
+	height: 300px;
+	background-color: #eee;
+}
+
+
+/*4col*/
+.aElement4, .bElement4, .cElement4{
+	float: left;
+	margin-right: 2%;
+	height: 300px;
+	background-color: #eee;
+}
+.dElement4{
+	float: left;
+	height: 300px;
+	background-color: #eee;
+}
+
+
+/*6col*/
+.aElement6, .bElement6, .cElement6, .dElement6, .eElement6{
+	float: left;
+	margin-right: 2%;
+	height: 300px;
+	background-color: #eee;
+}
+.fElement6{
+	float: left;
+	height: 300px;
+	background-color: #eee;
+}
+
+
+/*need to separate the width @media queries*/
+@media(min-width:1200px){
+	.container{
+		width: 1024px;
+	}
+	.aElement3, .bElement3, .cElement3{
+		width: 32%;
+		margin-top: 25px;
+	}
+	.aElement4, .bElement4, .cElement4, .dElement4{
+		width: 23.5%;
+		margin-top: 25px;
+	}
+	.aElement6, .bElement6, .cElement6, .dElement6, .eElement6, .fElement6{
+		width: 15%;
+		margin-top: 25px;
+	}
+}
