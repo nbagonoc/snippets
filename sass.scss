@@ -1,0 +1,76 @@
+//make variables.scss
+//make mixins.scss
+//make mediaQueries.scss
+//make style.scss of course.
+//use @import 'sass'; to import sass files to your style.scss file.
+//here's an example
+//
+@import 'variables';
+//
+//see, its easy.
+
+//example of variables
+$gray: #999;
+.container{
+	color: $gray;
+}
+//see, its easy. Now, you don't need to memorize that hex color code.
+
+//example of mixins
+@mixin cols{
+	width: 100%;
+	margin: 0 auto;
+	padding: 100px 0;
+	border-top: 1px solid $dirtyWhite;
+	overflow: hidden;
+}
+
+@mixin element{
+	background-color: $gray;
+	float: left;
+	height: 300px;
+	padding: 0;
+	margin: 1%;
+}
+//use @include nameOfMixin;
+//here's an example
+//
+.container {
+	color: red;
+	@include element;
+}
+//
+//see, its easy.
+
+
+//Pseudo Classes just use &:
+a{
+	color: red;
+	background-color: black;
+	&:hover{
+		color: blue;
+		background-color: green;
+	}
+}
+
+//color functions
+lighten($color, $amount);
+darken($color, $amount);
+saturate($color, $amount);
+desaturate($color, $amount);
+grayscale($color);
+complement($color);
+//example
+//
+a{
+	color: darken($gray, 5);
+}
+//
+//easy, right?
+
+//grid system using mathematical operators
+//
+//width: (94%/3);
+//margin: 1%;
+//
+//super easy.

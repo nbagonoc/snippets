@@ -274,7 +274,6 @@ hr {
 }
 
 
-
 /*MEDIA QUERIES*/
 
 /*extra small*/
@@ -293,7 +292,13 @@ hr {
 @media(min-width:1200px){
 }
 
+/*extra small container width: 100%*/
 
+/*small container width: 720px*/
+
+/*medium container width: 940px*/
+
+/*large container width: 1170px*/
 
 
 
