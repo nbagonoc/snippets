@@ -191,8 +191,16 @@ $(document).ready(function(){
 
   
   /*Ajax*/
-
-  /*$.ajax*/
+  
+  /*JQuery's ajax method helpers*/
+  $.ajax
+  $.load
+  $.get
+  $.post
+  $.getJSON
+  $.getScript
+  
+  /* $.ajax post data to be processed and displayed*/
   $.ajax({
     url: "createProcess.php",
     method: "post",
@@ -203,22 +211,53 @@ $(document).ready(function(){
     }
   });
 
+
+  /*$.load, simple example*/
+  $("#load").click(function(){
+    $(".update").load("demo.txt");
+  });
+
   /*$.load, load more every click*/
   var loadCounter = 5;
   $('#load').click(function(){
     loadCounter = loadCounter + 5;
-    $('table').load('loadMore.php', {
-      loadCounterNew: loadCounter
-    });
+    $('table').load('loadMore.php', { loadCounterNew: loadCounter });
   });
 
-  /*JQuery's ajax method helpers*/
-  $.ajax
-  $.load
-  $.get
-  $.post
-  $.getJSON
-  $.getScript
+  /*$.getJSON, gets jason file and display*/
+  $.getJSON('data.json', function(data){
+    
+    var output = '<ul>';
+    
+    $.each(data, function(key, val){
+      output += '<li>' + val.name + '</li>';
+    });
+    
+    output += '</ul>';
+
+    $('.content').html(output);
+  });
+
+
+  /*$.getJSON, ajax search thru jason file*/
+  $.getJSON('data.json', function(data){
+  
+  var output = '<ul>';
+  
+  $.each(data, function(key, val){
+    if(((val.name.search(myRegExp) != -1) || (val.bio.search(myRegExp) != -1)) && (searchValue != ""))  {/*search query regular expression*/
+      output += '<li>';
+      output += '<h2>' + val.name + '</h2>';
+      output += '<p>' + val.bio + '</p>';
+      output += '</li>';
+    }
+  });
+  
+  output += '</ul>';
+
+  $('.update').html(output);
+
+  
 
 
 
