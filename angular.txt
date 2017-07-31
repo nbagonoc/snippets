@@ -1,0 +1,10 @@
+node -v //checks version of node
+npm install -g angular-cli
+
+ng new projectname
+ng serve
+
+cd
+cd..
+cd\ or cd/ waah
+

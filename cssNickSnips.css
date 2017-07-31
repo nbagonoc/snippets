@@ -137,6 +137,32 @@
 }
 
 
+
+/*banner with placeholder image and vertical align text inside*/
+.banner{
+	height: 700px;
+	position: relative;
+	background: url("http://via.placeholder.com/1980x1080") center center;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.bannerText{
+	position: absolute;
+	width: 80%;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+
+
 /* Create the parallax scrolling effect to banners and subbanners*/
 .banner{
 	height: 700px;
