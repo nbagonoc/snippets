@@ -102,3 +102,48 @@ LARAVEL
 {!! Form::open(['url' => 'contact/submit']) !!}
 //
 {!! Form::close() !!}
+
+
+//Create a Laravel Project via Composer
+composer create-project --prefer-dist laravel/laravel blog "5.2.*"
+//Require Laravel Collective for HTML forms
+composer require "laravelcollective/html":"^5.4.0"
+
+
+ARTISAN
+//create a model with a Database Migration
+php artisan make:model ModelName -m
+//run the migration of the created model
+php artisan migrate
+php artisan 
+//create a controller
+php artisan make:controller NameControllers
+//create a controller with CRUD functionalities
+php artisan make:controller TodosController --resource
+//run tinker
+php artisan tinker
+$dbname = new App\DbName();
+
+//migrate a model
+php artisan migrate
+
+//modify first app/providers/AppServiceProviders.php when running a migration to prevent bugs
+use Illuminate\Support\Facades\Schema;
+    public function boot()
+    {
+        Schema::defaultStringLength(191);
+    }
+
+
+//LARAVEL
+//to use model, insert the model in the controller
+use App\ModelName;
+
+
+//TINKER
+$todo = new App\Todo();
+$todo->text='Todo One';
+$todo->body='this is todo one body';
+$todo->due='Tuesday';
+$todo->save();
+App\todo::all();
