@@ -55,7 +55,7 @@
 <?php echo home_url(); ?> <!-- grabs the home url http://www.example.com -->
 
 
-
+<p><?php echo get_post_meta($post->ID,'name-of-custom-field',true); ?></p> <!-- gets the custom field -->
 
 <!-- sidebar.php-->
 <?php if ( is_active_sidebar( 'sidebar' )  ) : ?>

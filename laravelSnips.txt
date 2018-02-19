@@ -1,0 +1,104 @@
+Models: app/
+View: resources/views
+Controller: app/Http/Controllers
+
+//Install and setup laravel on development server
+
+//CREATE NEW LARAVEL PROJECT
+composer create-project laravel/laravel larasample
+
+//SETUP VIRTUAL HOST FOR CREATED LARAVEL PROJECT
+
+//modify virtual host file
+C:\xampp\apache\conf\extra
+httpd-vhosts.conf
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs"
+    ServerName localhost
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs/project_name/public"
+    ServerName project_name.io
+</VirtualHost>
+
+//modify hosts file
+C:\Windows\System32\drivers\etc
+hosts file
+127.0.0.1 localhost
+127.0.0.1 project_name.io
+
+//Restart Apache for changes to take place
+
+------------------
+
+//NODE
+
+//make Sass compiling and mix js compiling available to us
+npm install
+
+//compile sass/js
+npm run dev
+
+//compile sass/js everytime you save sass and js file
+npm run watch
+
+------------------
+
+COMPOSER
+//create laravel project
+composer create-project laravel/laravel larasample
+
+//Use laravel Collective for forms
+//check website for info and installation https://laravelcollective.com/docs/5.4/html
+composer require "laravelcollective/html":"^5.4.0"
+
+------------------
+
+SETUP VIRTUAL HOST
+C:\xampp\apache\conf\extra
+
+httpd-vhosts.conf
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs"
+    ServerName localhost
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs/project_name/public"
+    ServerName project_name.io
+</VirtualHost>
+
+C:\Windows\System32\drivers\etc
+hosts file
+127.0.0.1 localhost
+127.0.0.1 project_name.io
+
+------------------
+
+ARTISAN
+//create a new controller
+php artisan make:controller NameController
+
+
+------
+
+LARAVEL
+
+//Title
+{{ config('app.name', 'LaraFirst') }}
+
+//app.blade.php
+@yield('content')
+
+//filename.blade.php
+@extends('layouts.app')
+@section('content')
+@endsection
+
+//opening a laravelcollective form
+{!! Form::open(['url' => 'contact/submit']) !!}
+//
+{!! Form::close() !!}
