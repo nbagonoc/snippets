@@ -118,11 +118,15 @@ php artisan migrate
 php artisan 
 //create a controller
 php artisan make:controller NameControllers
-//create a controller with CRUD functionalities
+//create a controller with CRUD functionalities/Methods
 php artisan make:controller TodosController --resource
 //run tinker
 php artisan tinker
 $dbname = new App\DbName();
+//enable authentication
+php artisan make:auth
+//view all routes
+php artisan route::list
 
 //migrate a model
 php artisan migrate
@@ -138,6 +142,8 @@ use Illuminate\Support\Facades\Schema;
 //LARAVEL
 //to use model, insert the model in the controller
 use App\ModelName;
+//adds route to all CRUD functionalities/Methods from controller with --resource
+Route::resource('listings', 'ListingsController');
 
 
 //TINKER
