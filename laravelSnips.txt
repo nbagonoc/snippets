@@ -44,6 +44,9 @@ npm run dev
 //compile sass/js everytime you save sass and js file
 npm run watch
 
+//install axios
+npm install --save axios
+
 ------------------
 
 COMPOSER
@@ -111,6 +114,9 @@ composer require "laravelcollective/html":"^5.4.0"
 
 
 ARTISAN
+//artisan simple way dummy data insert called by factories, faker
+//create development server on the created new laravel project
+php artisan serve
 //create a model with a Database Migration
 php artisan make:model ModelName -m
 //run the migration of the created model
