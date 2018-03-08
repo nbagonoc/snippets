@@ -90,6 +90,9 @@ php artisan make:controller NameController
 
 LARAVEL
 
+//data dump
+dd($request->all());
+
 //Title
 {{ config('app.name', 'LaraFirst') }}
 
@@ -106,11 +109,39 @@ LARAVEL
 //
 {!! Form::close() !!}
 
+//show hide to user that are login or not
+@if(Auth::check())
+    //html code here if user are login
+@endif
+
+//validate user input in store function
+$this->validate($request, [
+    'title' => 'required',
+    'body' => 'required',
+    'featured_image' => 'image|nullable|max:1999'
+]);
 
 //Create a Laravel Project via Composer
 composer create-project --prefer-dist laravel/laravel blog "5.2.*"
 //Require Laravel Collective for HTML forms
 composer require "laravelcollective/html":"^5.4.0"
+
+//form template
+{!! Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+    <div class="form-group">
+        {{Form::label('title', 'Title')}}
+        {{Form::text('title', '', ['class'=>'form-control', 'placeholder'=>'Enter the Title'])}}
+    </div>
+    <div class="form-group">
+        {{Form::label('content', 'Content')}}
+        {{Form::textarea('content', '', ['id'=>'article-ckeditor','class'=>'form-control', 'placeholder'=>'Enter the content'])}}
+    </div>
+    <div class="form-group">
+        {{Form::label('featured image', 'Featured Image')}}
+        {{Form::file('featured_image', '')}}
+    </div>
+    {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
+{!! Form::close() !!}
 
 
 ARTISAN
