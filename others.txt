@@ -1,0 +1,2 @@
+//ssh
+ssh -l username domain.com -p 22

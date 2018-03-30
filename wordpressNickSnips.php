@@ -310,3 +310,39 @@ sidebar.php
 	    <span class="sr-only">Next</span>
 	  </a>
 	</div>
+
+
+
+<?php
+
+// plugin development
+
+//hooks
+
+// add_filter('the_title', function($content){
+//     return strtoupper($content);
+//     return strtolower($content);
+//     return ucwords($content);
+// });
+
+// add_filter('the_content', function($content){
+//     return $content.time(); 
+// });
+
+// add_action('wp_footer', function(){
+//     echo 'hello from the footer';
+// });
+
+// add_action('comment_post', function(){
+//     $mail = get_bloginfo('admin_email');
+//     wp_mail(
+//         $mail,
+//         'new comment posted',
+//         'a new comment has been left on your blog post'
+//     );
+// });
+
+//shortcode
+// add_shortcode( 'nb_shortcode', function(){
+//     return` "hi";
+// })
