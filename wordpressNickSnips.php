@@ -215,7 +215,7 @@ sidebar.php
 <?php $query = new WP_Query('p=00'); ?>				
 <?php if($query->have_posts()) : while($query->have_posts()) : $query->the_post(); ?>
 	<div class="textContainer">
-		<a href="<?php the_permalink(); ?>"><h1 class="light"><?php the_title(); ?></h1></a> 
+		<a href="<?php the_permalink(); ?>"><h1 class="light"><?php the_title(); ?></h1></a>
 		<h3 class="light"><?php echo get_the_excerpt(); ?></h3>
 	</div>
 <?php endwhile; ?>

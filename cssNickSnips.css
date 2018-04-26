@@ -489,3 +489,38 @@ hr {
         display:block !important;
     }
 }
+
+
+/*some css without bootstrap*/
+body{
+    margin: 0 auto;
+}
+.container{
+    width: 768px;
+    margin: 0 auto;
+    padding: 5px;
+}
+.inner{
+    margin: 10px;
+}
+.row{
+    clear: both;
+}
+.left{
+    float: left;
+    width: 372px;
+    margin: 0 5px;
+    border: 1px solid #EEE;
+}
+.left .left-inner{
+    margin: 10px;
+}
+.right{
+    float: left;
+    width: 372px;
+    margin: 0 5px;
+    border: 1px solid #EEE;
+}
+.right .right-inner{
+    margin: 10px;
+}
