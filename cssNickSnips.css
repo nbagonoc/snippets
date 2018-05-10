@@ -373,6 +373,39 @@ hr {
     }
 }
 
+/*MEDIA QUERIES BS4*/
+/*extra small NO LONGER NEEDED. BY DEFAULT ON BS4*/
+/* @media(max-width:767px){
+	.col-xs-15 {
+	    width: 20%;
+	    float: left;
+	}
+} */
+/*small*/
+@media(min-width:567px){
+    .container{
+        max-width:720px !important;
+    }
+}
+/*medium*/
+@media(min-width:768px){
+    .container{
+        max-width:720px !important;
+    }
+}
+/*large*/
+@media(min-width:992px){
+    .container{
+        max-width:720px !important;
+    }
+}
+/*Extra large*/
+@media(min-width:1200px){
+    .container{
+        max-width:720px !important;
+    }
+}
+
 
 /*HTML*/
 
