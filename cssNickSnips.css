@@ -112,6 +112,10 @@
 }
 
 
+.jumbotron{
+	background: url("/img/banner.jpg") center center;
+	background-size: cover !important;
+}
 
 
 /*banner with fixed linear gradient and vertical align text inside*/
